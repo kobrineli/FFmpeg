@@ -149,7 +149,7 @@ AudioConvert *swri_audio_convert_alloc(enum AVSampleFormat out_fmt,
 {
     AudioConvert *ctx;
 
-    size_t idx = av_get_packed_sample_fmt(out_fmt) + AV_SAMPLE_FMT_NB * av_get_packed_sample_fmt(int_fmt);
+    size_t idx = av_get_packed_sample_fmt(out_fmt) + AV_SAMPLE_FMT_NB * av_get_packed_sample_fmt(in_fmt);
     if (idx >= AV_SAMPLE_FMT_NB * AV_SAMPLE_FMT_NB)
         return NULL;
 
